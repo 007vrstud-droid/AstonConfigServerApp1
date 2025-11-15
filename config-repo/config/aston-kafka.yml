@@ -6,11 +6,11 @@ spring:
     name: ASTON-KAFKA
   cloud:
     config:
-      uri: http://localhost:8881
+      uri: http://config-server:8881
   main:
     banner-mode: off
   kafka:
-    bootstrap-servers: localhost:9094
+    bootstrap-servers: kafka:9092
     consumer:
       group-id: notification-group
       auto-offset-reset: earliest
