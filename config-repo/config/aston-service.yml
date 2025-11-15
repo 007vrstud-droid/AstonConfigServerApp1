@@ -8,10 +8,10 @@ spring:
     name: ASTON-SERVICE
   cloud:
     config:
-      uri: http://localhost:8881
+      uri: http://config-server:8881
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/aston?currentSchema=public
+    url: jdbc:postgresql://postgres:5432/aston?currentSchema=public
     username: postgres
     password: admin
     driver-class-name: org.postgresql.Driver
@@ -34,11 +34,11 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-#    bootstrap-servers:
-#      - localhost:9094
+    bootstrap-servers:
+      - localhost:9092
 app:
   kafka:
-    bootstrap-servers: localhost:9094
+    bootstrap-servers: kafka:9092
 
 logging:
   level:
