@@ -6,7 +6,7 @@ spring:
     name: ASTON-EUREKA
   cloud:
     config:
-      uri: http://eureka-server:8881
+      uri: http://config-server:8881
   main:
     banner-mode: off
 
