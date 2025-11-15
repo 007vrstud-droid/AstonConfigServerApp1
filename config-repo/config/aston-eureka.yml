@@ -6,13 +6,15 @@ spring:
     name: ASTON-EUREKA
   cloud:
     config:
-      uri: http://localhost:8881
+      uri: http://eureka-server:8881
   main:
     banner-mode: off
 
 eureka:
+  instance:
+    hostname: eureka-server
   client:
     register-with-eureka: false
     fetch-registry: false
-  instance:
-    hostname: localhost
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/

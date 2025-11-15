@@ -13,6 +13,6 @@ spring:
         git:
 
           uri: https://github.com/007vrstud-droid/AstonConfigServerApp1.git
-          search-paths: config  # Указание пути к папке config, где находятся YAML файлы
-          default-label: main
+          search-paths: config-repo/config # Указание пути к папке config, где находятся YAML файлы
+          default-label: AstonConfigServerApp
           clone-on-start: true
