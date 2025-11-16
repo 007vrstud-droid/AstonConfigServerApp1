@@ -8,7 +8,7 @@ spring:
     banner-mode: off
   cloud:
     config:
-      uri: http://localhost:8881
+      uri: http://config-server:8881
     gateway:
       routes:
         - id: astonService
@@ -41,7 +41,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
 
